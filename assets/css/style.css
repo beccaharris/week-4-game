@@ -1,12 +1,14 @@
+body, html {
+  background-color: #000;
+  color: white
+}
 .crystal-pic {
-  height: 200px;
-  width: 300px;
-  float: left;
-}
-.crystal-pic-4 {
-  height: 200px;
+  height: 150px;
   width: 200px;
+  float: left;
+  margin-right: 10px;
+  border-right: 1px solid white
 }
-.crystal-pic:hover, .crystal-pic-4:hover {
+.crystal-pic:hover {
   cursor: pointer;
 }
