@@ -1,0 +1,12 @@
+.crystal-pic {
+  height: 200px;
+  width: 300px;
+  float: left;
+}
+.crystal-pic-4 {
+  height: 200px;
+  width: 200px;
+}
+.crystal-pic:hover, .crystal-pic-4:hover {
+  cursor: pointer;
+}
