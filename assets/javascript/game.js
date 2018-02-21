@@ -28,9 +28,5 @@ $(document).ready(function() {
     crystalValue = parseInt(crystalValue);
     scoreCalculator += crystalValue;
     $("#score-box").text(scoreCalculator); 
-    
-    
   })
-
-
 })
