@@ -20,7 +20,7 @@ body, html {
   color: #e7e5e4;
   font-size: 17px;
 }
-.random-number-div {
+.random-number-div, .score-box-div {
   text-align: center;
   margin-left: 49%;
   font-size: 24px;
@@ -36,14 +36,17 @@ h4 {
   font-size: 24px;
 }
 #crystal-pics {
-  margin-left: 22%
+  margin-left: 7%;
+  overflow: hidden;
+  width: 100%
 }
 .crystal-pic {
-  height: 150px;
-  width: 200px;
+  height: 200px;
+  width: 275px;
   float: left;
   margin-right: 10px;
   border-right: 1px solid #e7e5e4;
+  margin-top: 25px;
   margin-bottom: 25px;
 }
 .crystal-pic:hover {

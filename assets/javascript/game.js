@@ -3,7 +3,7 @@ $(document).ready(function() {
   var randomTargetNumber = Math.floor(Math.random() * 130) + 10;
   console.log(randomTargetNumber)
   // Inject the randomly generated number into the html // 
-  $("#random-number").html("<h4>Target Number:</h4> " + randomTargetNumber);  
+  $("#random-number").html("<h4>Target Number:</h4>" + randomTargetNumber);  
   // Make crystals-pic div into a variable //
   var crystalPics = $("#crystal-pics");
   // Put all crystal images into an array //
@@ -12,7 +12,7 @@ $(document).ready(function() {
   var numberOptions = Array.from({length: 4}, () => Math.floor(Math.random() * 10) + 1);
   console.log(numberOptions)
   var scoreCalculator = 0;
-  $("#score-box").text(scoreCalculator); 
+  $("#score-box").html("<h4>Your total score is:</h4>" + scoreCalculator); 
 
   // Iterate through each item in the numberOptions array, create a space for that image in html, assign class, and assign image (taken from crystalsArray) //
   for (var i = 0; i < numberOptions.length; i++) {
@@ -27,6 +27,6 @@ $(document).ready(function() {
     var crystalValue = ($(this).attr("data-crystalvalue"));
     crystalValue = parseInt(crystalValue);
     scoreCalculator += crystalValue;
-    $("#score-box").text(scoreCalculator); 
+    $("#score-box").html("<h4>Your total score is:</h4>" + scoreCalculator); 
   })
 })
