@@ -10,26 +10,31 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">  
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="assets/javascript/game.js"></script>
+
 </head>
 <body>
   <ul class="nav">
     <h1 class='elegantshadow'>Crystal Collector Game</h1>
   </ul>
   <div class="container">
-  <div id="random-number">
-    <!-- jQuery inject random target number here -->
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p class="instructions-text">You will be given a random number at the start of the game - this will be your "target number" - the number you're trying to reach.<br><br>There are four crystals below. By clicking on a crystal, you will add a specific (and random) number of points to your total score.<br><br>You win the game by matching your total score to the target number you are given...You lose the game if your total score  goes above the target number.<br><br>The value of each crystal is hidden from you until you click on it.<br><br>Each time that the game starts, the target number changes, as will the values of each individual crystal.</p>
+      </div>
+    </div>
+    <div class="random-number-div" id="random-number">
+      <!-- jQuery inject random target number here -->
+    </div>
+    <div id="crystal-pics">
+      <!-- jQuery inject crystal pictures here -->
+    </div>
+    <div id="score-box">
+      <!-- jQuery inject here with updated score each time a user clicks a crystal -->
+    </div>
   </div>
-  <div id="crystal-pics">
-    <!-- jQuery inject crystal pictures here -->
-  </div>
-  <div id="score-box">
-    <!-- jQuery inject here with updated score each time a user clicks a crystal -->
-  </div>
-</div>
   
 </body>
 </html>

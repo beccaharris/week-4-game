@@ -3,7 +3,7 @@ $(document).ready(function() {
   var randomTargetNumber = Math.floor(Math.random() * 130) + 10;
   console.log(randomTargetNumber)
   // Inject the randomly generated number into the html // 
-  $("#random-number").text(randomTargetNumber);  
+  $("#random-number").html("<h4>Target Number:</h4> " + randomTargetNumber);  
   // Make crystals-pic div into a variable //
   var crystalPics = $("#crystal-pics");
   // Put all crystal images into an array //
