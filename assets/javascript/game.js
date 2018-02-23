@@ -1,18 +1,19 @@
 $(document).ready(function() {
-  // This is the number that the player will be trying to get to by clicking the crystals // 
   var randomTargetNumber = Math.floor(Math.random() * 130) + 10;
-  console.log(randomTargetNumber)
-  // Inject the randomly generated number into the html // 
-  $("#random-number").html("<h4>Target Number:</h4>" + randomTargetNumber);  
-  // Make crystals-pic div into a variable //
+  var wins = 0;
+  var losses = 0;
   var crystalPics = $("#crystal-pics");
-  // Put all crystal images into an array //
   var crystals = ['assets/images/crystal-1.png', 'assets/images/crystal-2.png', 'assets/images/crystal-3.png', 'assets/images/crystal-4.png']
-  // Create array of number options. Length of 4, numbers between 1 and 15 //
   var numberOptions = Array.from({length: 4}, () => Math.floor(Math.random() * 10) + 1);
-  console.log(numberOptions)
   var scoreCalculator = 0;
+
+  // Inject some html into the document //
+  $("#wins-losses-div").html("<h4>Wins: " + wins +"</h4>" + "<h4>Losses:      " + losses + "</h4>")
+  $("#random-number").html("<h4>Target Number:</h4>" + randomTargetNumber);  
   $("#score-box").html("<h4>Your total score is:</h4>" + scoreCalculator); 
+  $("#score-box").html("<h4>Your total score is:</h4>" + scoreCalculator); 
+
+
 
   // Iterate through each item in the numberOptions array, create a space for that image in html, assign class, and assign image (taken from crystalsArray) //
   for (var i = 0; i < numberOptions.length; i++) {
@@ -27,6 +28,26 @@ $(document).ready(function() {
     var crystalValue = ($(this).attr("data-crystalvalue"));
     crystalValue = parseInt(crystalValue);
     scoreCalculator += crystalValue;
+
+    function resetGame () {
+      scoreCalculator = 0;
+      randomTargetNumber = Math.floor(Math.random() * 130) + 10;
+      $("#random-number").html("<h4>Target Number:</h4>" + randomTargetNumber);  
+      numberOptions = Array.from({length: 4}, () => Math.floor(Math.random() * 10) + 1);
+    }
+    if (scoreCalculator === randomTargetNumber) {
+      alert("Congratulations! Your score is exactly the same as the target number! You won!");
+      wins++;
+      $("#wins-losses-div").html("<h4>Wins: " + wins +"</h4>" + "<h4>Losses: " + losses + "</h4>");
+      resetGame()
+    } else if (scoreCalculator > randomTargetNumber) {
+      alert("Oh no! Your total score of " + scoreCalculator + " exceeded the target number of " + randomTargetNumber);
+      losses++;
+      $("#wins-losses-div").html("<h4>Wins: " + wins +"</h4>" + "<h4>Losses: " + losses + "</h4>");
+      resetGame();
+    }
     $("#score-box").html("<h4>Your total score is:</h4>" + scoreCalculator); 
   })
+
+  
 })
