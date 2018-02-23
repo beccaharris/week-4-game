@@ -19,22 +19,46 @@
     <h1 class='elegantshadow'>Crystal Collector Game</h1>
   </nav>
   <div class="container">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <p class="instructions-text">You will be given a random number at the start of the game - this will be your "target number" - the number you're trying to reach.<br><br>There are four crystals below. By clicking on a crystal, you will add a specific (and random) number of points to your total score.<br><br>You win the game by matching your total score to the target number you are given...You lose the game if your total score  goes above the target number.<br><br>The value of each crystal is hidden from you until you click on it.<br><br>Each time that the game starts, the target number changes, as will the values of each individual crystal.</p>
+    <div class=row>
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p class="instructions-text">You will be given a random number at the start of the game - this will be your "target number" - the number you're trying to reach.<br><br>There are four crystals below. By clicking on a crystal, you will add a specific (and random) number of points to your total score.<br><br>You win the game by matching your total score to the target number you are given...You lose the game if your total score goes above the target number.<br><br>The value of each crystal is hidden from you until you click on it.<br><br>Each time that the game starts, the target number changes,as will the values of each individual crystal.</p>
+          </div>
+        </div>
       </div>
+      <div class="col-md-2"></div>
     </div>
-    <div class="random-number-div" id="random-number">
-      <!-- jQuery inject random target number here -->
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <div class="random-number-div" id="random-number">
+        <!-- jQuery inject random target number here -->
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="score-box-div" id="score-box">
+          <!-- jQuery inject here with updated score each time a user clicks a crystal -->
+        </div>
+      </div>
+      <div class="col-md-2"></div>
     </div>
-    <div class="score-box-div" id="score-box">
-      <!-- jQuery inject here with updated score each time a user clicks a crystal -->
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="wins-losses-div" id="wins-losses-div">
+          <!-- jQuery inject win/loss variables here -->
+        </div>   
+      </div> 
+      <div class="col-md-4"></div>
     </div>
-    <div class="wins-losses-div" id="wins-losses-div">
-      <!-- jQuery inject win/loss variables here -->
-    </div>    
-    <div id="crystal-pics">
-      <!-- jQuery inject crystal pictures here -->
+    <div class="row">
+      <div class="col-md-12">
+        <div id="crystal-pics">
+          <!-- jQuery inject crystal pictures here -->
+        </div>
+      </div>
     </div>
     
   </div>

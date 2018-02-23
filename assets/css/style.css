@@ -4,13 +4,8 @@ body, html {
   padding-bottom: 70px;
   font-family: 'Alegreya Sans', sans-serif;
 }
-.container {
-  margin-left: 25px;
-  margin-right: 25px;
-}
+
 .panel {
-  width:60%;
-  margin-left: 29%;
   margin-top: 15px
 }
 .panel-body {
@@ -22,10 +17,8 @@ body, html {
 }
 .random-number-div, .score-box-div {
   text-align: center;
-  margin-left: 49%;
   font-size: 24px;
   background-color: #464646;
-  width: 20%;
   padding-top: 10px;
   padding-bottom: 20px;
   border: 2px solid #e7e5e4;
@@ -36,17 +29,13 @@ body, html {
   text-align: center;
   background-color: #464646;
   border: 2px solid #e7e5e4;
-  margin-left: 49%;
   font-size: 24px;
-  width: 20%;
 }
 h4 {
   font-size: 24px;
 }
 #crystal-pics {
-  margin-left: 11%;
   overflow: hidden;
-  width: 100%
 }
 .crystal-pic {
   height: 200px;

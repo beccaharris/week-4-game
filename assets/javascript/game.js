@@ -33,8 +33,9 @@ $(document).ready(function() {
       scoreCalculator = 0;
       randomTargetNumber = Math.floor(Math.random() * 130) + 10;
       $("#random-number").html("<h4>Target Number:</h4>" + randomTargetNumber);  
-      numberOptions = Array.from({length: 4}, () => Math.floor(Math.random() * 10) + 1);
+      var numberOptions = Array.from({length: 4}, () => Math.floor(Math.random() * 10) + 1);
     }
+
     if (scoreCalculator === randomTargetNumber) {
       alert("Congratulations! Your score is exactly the same as the target number! You won!");
       wins++;
