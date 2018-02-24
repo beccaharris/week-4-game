@@ -28,20 +28,19 @@ $(document).ready(function() {
     crystalValue = parseInt(crystalValue);
     scoreCalculator += crystalValue;
 
-    function resetTargetAndScore () {
+    function resetTargetScoreValues () {
       scoreCalculator = 0;
       randomTargetNumber = Math.floor(Math.random() * 130) + 10;
       $("#random-number").html("<h4>Target Number:</h4>" + randomTargetNumber);
       var newValues = $(".crystal-pic")
       numberOptions = Array.from({length: 4}, () => Math.floor(Math.random() * 10) + 1);
       for (var i = 0; i < newValues.length; i++) {
-        newValues[i].attr("data-crystalvalue", numberOptions[i]);
+        $(newValues[i]).attr("data-crystalvalue", numberOptions[i]);
       }
     }
+    
     function resetGame () {
-      scoreCalculator = 0;
-      randomTargetNumber = Math.floor(Math.random() * 130) + 10;
-      $("#random-number").html("<h4>Target Number:</h4>" + randomTargetNumber);
+      resetTargetScoreValues();
       wins = 0;
       losses = 0;
     }
@@ -50,15 +49,13 @@ $(document).ready(function() {
       alert("Congratulations! Your score is exactly the same as the target number! You won!");
       wins++;
       $("#wins-losses-div").html("<h4>Wins: " + wins +"</h4>" + "<h4>Losses: " + losses + "</h4>");
-      resetTargetAndScore()
+      resetTargetScoreValues()
     } else if (scoreCalculator > randomTargetNumber) {
       alert("Oh no! Your total score of " + scoreCalculator + " exceeded the target number of " + randomTargetNumber);
       losses++;
       $("#wins-losses-div").html("<h4>Wins: " + wins +"</h4>" + "<h4>Losses: " + losses + "</h4>");
-      resetTargetAndScore();
+      resetTargetScoreValues();
     }
     $("#score-box").html("<h4>Your total score is:</h4>" + scoreCalculator); 
   })
-
-  
 })
