@@ -7,7 +7,6 @@
   <link rel="icon" href="assets/images/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
-  <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">  
@@ -15,10 +14,13 @@
   <script src="assets/javascript/game.js"></script>
 </head>
 <body>
+  <!-- Main Nav --> 
   <nav class="nav">
     <h1 class='elegantshadow'>Crystal Collector Game</h1>
   </nav>
+  <!-- Actual game content --> 
   <div class="container">
+    <!-- Instructions -->
     <div class=row>
       <div class="col-md-2"></div>
       <div class="col-md-8">
@@ -30,6 +32,7 @@
       </div>
       <div class="col-md-2"></div>
     </div>
+    <!-- Target Number & Score Box --> 
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-4">
@@ -44,6 +47,7 @@
       </div>
       <div class="col-md-2"></div>
     </div>
+    <!-- Wins & Losses --> 
     <div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-4">
@@ -53,6 +57,7 @@
       </div> 
       <div class="col-md-4"></div>
     </div>
+    <!-- Pictures of crystals --> 
     <div class="row">
       <div class="col-md-12">
         <div id="crystal-pics">
@@ -60,12 +65,23 @@
         </div>
       </div>
     </div>
-    
   </div>
-  <nav class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
-      ...
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <button class="reset-button" id="reset-button">Reset</button>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
     </div>
+    <div class="col-md-4"></div>
+  </div>
+  <!-- Footer --> 
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+      <p class="footer-text">&copy; Copyright 2018 Becca Harris</p>
   </nav>
 </body>
 </html>
