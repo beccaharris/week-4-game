@@ -21,7 +21,7 @@
   <!-- Actual game content --> 
   <div class="container">
     <!-- Instructions -->
-    <div class=row>
+    <div class="row with-background">
       <div class="col-md-2"></div>
       <div class="col-md-8">
         <div class="card card-default">
@@ -31,6 +31,23 @@
         </div>
       </div>
       <div class="col-md-2"></div>
+    </div>
+    <!-- Alerts -->
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="alert alert-success" role="alert">
+          Congratulations! Your score is exactly the same as the target number! You won!
+          <br>
+          Click a crystal to play again or the reset button to start over.
+        </div>
+        <div class="alert alert-danger" role="alert">
+          Oh no! Your total score exceeded the target number! You lose this round!
+          <br>
+          Click a crystal to play again or the reset button to start over. 
+        </div>
+      </div>
+      <div class="col-md-1"></div>
     </div>
     <!-- Target Number & Score Box --> 
     <div class="row">
